@@ -19,7 +19,7 @@ class GoogleAuthController extends Controller
 
             $find_user= Socialite::driver('google')->user();
 
-            dd($find_user);
+            // dd($find_user);
 
             $user = User::where('google_id', $find_user->getId())->first();
 
